@@ -46,10 +46,10 @@ export default function Home() {
         <title>Roast Me - by @0xahzam</title>
         <link rel="shortcut icon" href="musk.png" />
         <meta name="description" content="Come and get roasted by GPT3" key="desc" />
-        <meta property="og:title" content="Come and get roasted by GPT3" />
+        <meta property="og:title" content="Roast Me" />
         <meta
           property="og:image"
-          content="musk.png"
+          content="https://ichef.bbci.co.uk/news/976/cpsprodpb/7727/production/_103330503_musk3.jpg.webp"
         />
       </Head>
       <Flex justify={"center"} fontFamily={"Syne, sans-serif"}>
