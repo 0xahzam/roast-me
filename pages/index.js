@@ -42,6 +42,16 @@ export default function Home() {
 
   return (
     <div className="main">
+      <Head>
+        <title>Roast Me - by @0xahzam</title>
+        <link rel="shortcut icon" href="musk.png" />
+        <meta name="description" content="Come and get roasted by GPT3" key="desc" />
+        <meta property="og:title" content="Come and get roasted by GPT3" />
+        <meta
+          property="og:image"
+          content="musk.png"
+        />
+      </Head>
       <Flex justify={"center"} fontFamily={"Syne, sans-serif"}>
         <Flex
           flexDir={"column"}
