@@ -76,7 +76,7 @@ export default function Home() {
               borderBottomLeftRadius={"7px"}
               background={"#0D0D0D"}
               focusBorderColor="none"
-              _hover={{focusBorderColor:""}}
+              _hover={{ focusBorderColor: "" }}
             />
 
             <Button
@@ -89,6 +89,7 @@ export default function Home() {
               borderTopRightRadius={"7px"}
               borderBottomRightRadius={"7px"}
               onClick={callGenerateEndpoint}
+              _active={{ background: "rgba(204, 63, 14, 1)" }}
             >
               {isGenerating ? (
                 <Spinner />
