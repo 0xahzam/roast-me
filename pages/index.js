@@ -9,6 +9,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 
+import { Spinner } from "@chakra-ui/react";
+
 import { useState } from "react";
 
 export default function Home() {
@@ -42,16 +44,6 @@ export default function Home() {
 
   return (
     <div className="main">
-      <Head>
-        <title>Roast Me - by @0xahzam</title>
-        <link rel="shortcut icon" href="musk.png" />
-        <meta name="description" content="Come and get roasted by GPT3" key="desc" />
-        <meta property="og:title" content="Roast Me" />
-        <meta
-          property="og:image"
-          content="https://ichef.bbci.co.uk/news/976/cpsprodpb/7727/production/_103330503_musk3.jpg.webp"
-        />
-      </Head>
       <Flex justify={"center"} fontFamily={"Syne, sans-serif"}>
         <Flex
           flexDir={"column"}
@@ -71,6 +63,7 @@ export default function Home() {
               fontSize={{ base: "18px", md: "20px" }}
               color={"white"}
               placeholder="start typing here"
+              _placeholder={{ color: "rgba(256,256,256,0.45 )" }}
               value={userInput}
               onChange={onUserChangedText}
               border={""}
@@ -82,6 +75,8 @@ export default function Home() {
               borderTopLeftRadius={"7px"}
               borderBottomLeftRadius={"7px"}
               background={"#0D0D0D"}
+              focusBorderColor="none"
+              _hover={{focusBorderColor:""}}
             />
 
             <Button
@@ -95,13 +90,16 @@ export default function Home() {
               borderBottomRightRadius={"7px"}
               onClick={callGenerateEndpoint}
             >
-              {" "}
-              <Image
-                src="rightarrow.svg"
-                alt=""
-                height={"38px"}
-                width={"38px"}
-              />{" "}
+              {isGenerating ? (
+                <Spinner />
+              ) : (
+                <Image
+                  src="rightarrow.svg"
+                  alt=""
+                  height={"38px"}
+                  width={"38px"}
+                />
+              )}
             </Button>
           </ButtonGroup>
           <Text
